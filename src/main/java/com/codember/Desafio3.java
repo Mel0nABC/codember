@@ -42,14 +42,14 @@ public class Desafio3 {
         }
     }
 
-    public static int getPasos(int[] listaNumeros) {
+    public static int getPasos(int[] numberListLine) {
         int count = 0;
         int index = 0;
-        while (index < listaNumeros.length && index >= 0) {
+        while (index < numberListLine.length && index >= 0) {
             int oldIndex = index;
-            index += listaNumeros[index];
+            index += numberListLine[index];
             count++;
-            listaNumeros[oldIndex] += 1;
+            numberListLine[oldIndex] += 1;
         }
 
         return count;
