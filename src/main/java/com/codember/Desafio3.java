@@ -8,27 +8,27 @@ import java.util.Arrays;
 
 public class Desafio3 {
 
-    private static ArrayList<int[]> lista = new ArrayList<>();
+    private static ArrayList<int[]> integerList = new ArrayList<>();
 
     public static void main(String[] args) {
 
-        BufferedReader leerArchivo;
+        BufferedReader readFile;
         try {
-            leerArchivo = new BufferedReader(new FileReader("./Desafio3.txt"));
-            String[] filas = leerArchivo.lines().toArray(String[]::new);
+            readFile = new BufferedReader(new FileReader("./Desafio3.txt"));
+            String[] row = readFile.lines().toArray(String[]::new);
 
-            for (String s : filas) {
-                lista.add(Arrays.stream(s.split(" ")).mapToInt(Integer::parseInt).toArray());
+            for (String s : row) {
+                integerList.add(Arrays.stream(s.split(" ")).mapToInt(Integer::parseInt).toArray());
             }
 
             int total = 0;
             int lastLine = 0;
 
-            for (int i = 0; i < lista.size(); i++) {
-                int valueLine = getPasos(lista.get(i));
+            for (int i = 0; i < integerList.size(); i++) {
+                int valueLine = getPasos(integerList.get(i));
                 total += valueLine;
 
-                if (i == lista.size() - 1) {
+                if (i == integerList.size() - 1) {
                     lastLine = valueLine;
                 }
             }
