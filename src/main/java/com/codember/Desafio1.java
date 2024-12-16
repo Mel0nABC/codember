@@ -5,6 +5,7 @@ public class Desafio1 {
     // private static final String INFORMACION = "000 URURD"; //test
     // private static final String INFORMACION = "1111 UUURUUU"; //test
     // private static final String INFORMACION = "9999 LULULULD"; //test
+    // private static final String INFORMACION = "528934712834 URDURUDRUDLLLLUUDDUDUDUDLLRRRR";
     private static final String INFORMACION = "528934712834 URDURUDRUDLLLLUUDDUDUDUDLLRRRR";
 
     private static int[] combinacion;
